@@ -1,0 +1,37 @@
+[-] Not found on GitHub
+[+] Found on Instagram
+[+] Found on Twitter
+
+
+[96m===== HASIL WHOIS DOMAIN =====[0m
+[97mDomain       : [92myoutube.com[0m
+
+[96mData:[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[93m Field            [0m[96m|[0m[93m Value                                      [0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[92m Domain Name      [0m[96m|[0m[97m YOUTUBE.COM                                [0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[92m Registrar        [0m[96m|[0m[97m MarkMonitor Inc.                           [0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[92m Creation Date    [0m[96m|[0m[97m 2005-02-15T05:13:12Z                       [0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[92m Expiration Date  [0m[96m|[0m[97m 2026-02-15T05:13:12Z                       [0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[92m Updated Date     [0m[96m|[0m[97m 2025-01-14T10:06:34Z                       [0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[92m Name Server      [0m[96m|[0m[97m NS1.GOOGLE.COM                             [0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m NS4.GOOGLE.COM                             [0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m NS2.GOOGLE.COM                             [0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m NS3.GOOGLE.COM                             [0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+[96m|[0m[92m Status           [0m[96m|[0m[97m clientTransferProhibited https://icann.org/epp#clientTransferProhibited[0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited[0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m serverTransferProhibited https://icann.org/epp#serverTransferProhibited[0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited[0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited[0m[96m|[0m
+[96m|[0m                  [96m|[0m[97m clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited[0m[96m|[0m
+[96m+------------------+--------------------------------------------+[0m
+
+
+============================================================
