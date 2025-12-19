@@ -11,3 +11,7 @@ Simple OSINT Toolkit berbasis Python (CLI)
 ## Installation
 ```bash
 pip install -r requirements.txt
+
+## Usage
+ python main.py
+
