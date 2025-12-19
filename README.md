@@ -8,7 +8,7 @@ OSINT Toolkit v1 adalah **tool CLI berbasis Python** untuk melakukan *Open Sourc
 - Whois Domain  
 - IP Information  
 - DNS Lookup  
-- Username Checker (platform populer)
+- Username Checker
 
 ---
 
@@ -23,4 +23,7 @@ OSINT Toolkit v1 adalah **tool CLI berbasis Python** untuk melakukan *Open Sourc
 git clone https://github.com/USERNAME_KAMU/osint-toolkit.git
 cd OSINT-ToolKit
 pip install -r requirements.txt
+# jika gagal coba install dnspython manual
+python -m pip install dnspython
+# lalu jalankan tools nya
 python main.py
