@@ -21,6 +21,6 @@ OSINT Toolkit v1 adalah **tool CLI berbasis Python** untuk melakukan *Open Sourc
 ### Install & Run
 ```bash
 git clone https://github.com/USERNAME_KAMU/osint-toolkit.git
-cd osint-toolkit
+cd OSINT-ToolKit
 pip install -r requirements.txt
 python main.py
