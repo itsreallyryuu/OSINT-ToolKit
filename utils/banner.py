@@ -16,10 +16,12 @@ def show_banner():
  \$$    $$|   $$ \| $$     \ \$$    $$  | $$   | $$  | $$
   \$$$$$$  \$$$$$$ \$$$$$$$$  \$$$$$$    \$$    \$$   \$$
 
-                  SIESTA v1 - WH01S Ryuu
+                SIESTA v1 | OSINT FRAMEWORK!
+                 :: Developed by Ryuudev ::
+
     """
     # Gradient merah: merah gelap → normal → terang → normal → gelap
-    colors = [DARK_RED, RED, BRIGHT_RED, RED, DARK_RED, RED, BRIGHT_RED, RED, DARK_RED, BRIGHT_RED, RED]
+    colors = [BRIGHT_RED, BRIGHT_RED, BRIGHT_RED]
     for i, line in enumerate(banner_lines.split("\n")):
         color = colors[i % len(colors)]
         print(color + line + RESET)

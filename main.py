@@ -39,13 +39,13 @@ def post_action(result):
 def menu():
     print(BRIGHT_RED + """
 ===============================
-        MENU - SIESTA v1
+        MENU - Siesta v1
 ===============================
 """ + RESET)
     print(BRIGHT_RED + """
 [1] Whois Domain
 [2] IP Information
-[3] DNS Lookup
+[3] DNSLookup
 [4] Username Check
 [5] HTTP Header Analyzer
 [6] Web Tech Detection
