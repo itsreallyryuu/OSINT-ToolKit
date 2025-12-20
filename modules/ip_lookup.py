@@ -1,31 +1,32 @@
 import requests
 import time
 
-RESET  = "\033[0m"
-RED    = "\033[91m"
-GREEN  = "\033[92m"
-YELLOW = "\033[93m"
-CYAN   = "\033[96m"
-WHITE  = "\033[97m"
-MAGENTA= "\033[95m"
+RESET       = "\033[0m"
+BRIGHT_RED  = "\033[91m"  
+RED         = "\033[31m"
+GREEN       = "\033[92m"
+WHITE       = "\033[97m"
+CYAN        = "\033[96m"
+YELLOW      = "\033[93m"
+MAGENTA     = "\033[95m"
 
 def render_table(data):
     col1, col2 = 18, 50
-    line = CYAN + "+" + "-"*col1 + "+" + "-"*col2 + "+" + RESET
+    line = BRIGHT_RED + "+" + "-"*col1 + "+" + "-"*col2 + "+" + RESET
 
     table = line + "\n"
-    table += CYAN + "|" + RESET + YELLOW + " Field".ljust(col1) + RESET
-    table += CYAN + "|" + RESET + YELLOW + " Value".ljust(col2) + RESET
-    table += CYAN + "|" + RESET + "\n"
+    table += BRIGHT_RED + "|" + RESET + YELLOW + " Field".ljust(col1) + RESET
+    table += BRIGHT_RED + "|" + RESET + YELLOW + " Value".ljust(col2) + RESET
+    table += BRIGHT_RED + "|" + RESET + "\n"
     table += line + "\n"
 
     for k, v in data.items():
         table += (
-            CYAN + "|" + RESET +
+            BRIGHT_RED + "|" + RESET +
             GREEN + f" {k}".ljust(col1) + RESET +
-            CYAN + "|" + RESET +
+            BRIGHT_RED + "|" + RESET +
             WHITE + f" {v}".ljust(col2) + RESET +
-            CYAN + "|" + RESET + "\n"
+            BRIGHT_RED + "|" + RESET + "\n"
         )
         table += line + "\n"
 
@@ -71,7 +72,7 @@ def ip_osint(ip):
         pass
 
     if not sources:
-        return RED + "Gagal mengambil data dari semua sumber." + RESET
+        return BRIGHT_RED + "Gagal mengambil data dari semua sumber." + RESET
 
     final = {}
     confidence = {}

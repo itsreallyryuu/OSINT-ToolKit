@@ -2,13 +2,8 @@ import socket
 import re
 
 RESET  = "\033[0m"
-RED    = "\033[91m"
-GREEN  = "\033[92m"
-YELLOW = "\033[93m"
-BLUE   = "\033[94m"
-CYAN   = "\033[96m"
-WHITE  = "\033[97m"
-
+RED    = "\033[91m"  # semua border dan error
+WHITE  = "\033[97m"  # semua teks
 WHOIS_SERVERS = {
     "com": "whois.verisign-grs.com",
     "net": "whois.verisign-grs.com",
@@ -52,15 +47,16 @@ def render_table(data):
     col1 = 18
     col2 = 44
 
-    line = CYAN + "+" + "-"*col1 + "+" + "-"*col2 + "+" + RESET
+    # Semua border merah
+    line = RED + "+" + "-"*col1 + "+" + "-"*col2 + "+" + RESET
 
     table = line + "\n"
     table += (
-        CYAN + "|" + RESET +
-        YELLOW + " Field".ljust(col1) + RESET +
-        CYAN + "|" + RESET +
-        YELLOW + " Value".ljust(col2) + RESET +
-        CYAN + "|" + RESET + "\n"
+        RED + "|" + RESET +
+        WHITE + " Field".ljust(col1) + RESET +
+        RED + "|" + RESET +
+        WHITE + " Value".ljust(col2) + RESET +
+        RED + "|" + RESET + "\n"
     )
     table += line + "\n"
 
@@ -68,19 +64,19 @@ def render_table(data):
         for i, value in enumerate(values):
             if i == 0:
                 table += (
-                    CYAN + "|" + RESET +
-                    GREEN + f" {field}".ljust(col1) + RESET +
-                    CYAN + "|" + RESET +
+                    RED + "|" + RESET +
+                    WHITE + f" {field}".ljust(col1) + RESET +
+                    RED + "|" + RESET +
                     WHITE + f" {value}".ljust(col2) + RESET +
-                    CYAN + "|" + RESET + "\n"
+                    RED + "|" + RESET + "\n"
                 )
             else:
                 table += (
-                    CYAN + "|" + RESET +
+                    RED + "|" + RESET +
                     " ".ljust(col1) +
-                    CYAN + "|" + RESET +
+                    RED + "|" + RESET +
                     WHITE + f" {value}".ljust(col2) + RESET +
-                    CYAN + "|" + RESET + "\n"
+                    RED + "|" + RESET + "\n"
                 )
         table += line + "\n"
 
