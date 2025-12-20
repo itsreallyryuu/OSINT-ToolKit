@@ -1,12 +1,12 @@
 import os
-from utils.banner import show_banner
+from utils.banner import RED, show_banner
 from modules.whois_lookup import whois_domain
 from modules.ip_lookup import ip_info
 from modules.dns_lookup import dns_lookup
 from modules.username_check import check_username
 from modules.http_header import analyze_headers
 from modules.tech_fingerprint import fingerprint
-
+from modules.ip_geo import ip_geolocation
 RESET       = "\033[0m"
 BRIGHT_RED  = "\033[91m"  # merah menyala, untuk borders, info, error
 WHITE       = "\033[97m"  # text utama
@@ -39,16 +39,17 @@ def post_action(result):
 def menu():
     print(BRIGHT_RED + """
 ===============================
-        MENU - SIESTA v1
+        MENU - Siesta v1
 ===============================
 """ + RESET)
     print(BRIGHT_RED + """
 [1] Whois Domain
 [2] IP Information
-[3] DNS Lookup
+[3] DNSLookup
 [4] Username Check
 [5] HTTP Header Analyzer
 [6] Web Tech Detection
+[7] IP Geolocation
 [0] Exit
 """ + RESET)
 
@@ -145,6 +146,19 @@ def main():
 """
             print(result)
             post_action(result)
+            
+        elif choice == "7":
+            print(RED + "\n[INFO] IP Geolocation Lookup\n" + RESET)
+    
+            ip = input("Target IP : ").strip()
+            result = ip_geolocation(ip)
+
+            if "error" in result:
+                    print(RED + "[ERROR] " + result["error"] + RESET)
+            else:
+                print(BRIGHT_RED + "\n===== GEO RESULT =====" + RESET)
+                for k, v in result.items():
+                    print(f"{WHITE}{k.upper():12}{RESET}: {v}{RESET}")        
         
 
         elif choice == "0":
