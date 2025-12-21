@@ -2,8 +2,8 @@ import requests
 from urllib.parse import urlparse
 
 RESET  = "\033[0m"
-RED    = "\033[91m"      # border merah
-BRIGHT_RED = "\033[91m"  # bisa juga pakai ini kalau mau lebih menyala
+RED    = "\033[91m"
+BRIGHT_RED = "\033[91m"
 GREEN  = "\033[92m"
 WHITE  = "\033[97m"
 YELLOW = "\033[93m"

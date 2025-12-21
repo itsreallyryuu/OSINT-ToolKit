@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Ultra-WHOIS  :  12 sumber bebas, tanpa API-key, anti gagal
 Author       :  Siesta v1
@@ -14,7 +12,6 @@ WHITE = "\033[97m"
 CYAN  = "\033[96m"
 YELLOW= "\033[93m"
 
-# ---------- UTILS ----------
 def normalize_domain(d):
     d = d.lower().strip()
     return urlparse(d).netloc or d.split("/")[0]
@@ -35,7 +32,6 @@ def date_norm(d):
     try: return datetime.datetime.fromisoformat(d.replace("Z","+00:00")).strftime("%Y-%m-%d %H:%M:%S UTC")
     except: return d
 
-# ---------- 1. PORT-43 + REFERRAL ----------
 def whois_port43(domain):
     def query(srv):
         try:
@@ -85,7 +81,6 @@ def whois_port43(domain):
             vote(f, m.group(1), "port43", b)
     return b
 
-# ---------- 2. RDAP ----------
 def whois_rdap(domain):
     tld = domain.split(".")[-1]
     try:
@@ -129,7 +124,6 @@ def whois_rdap(domain):
     vote("DNSSEC", "signed" if j.get("dnssec") else "unsigned", "rdap", b)
     return b
 
-# ---------- 3. HACKERTARGET ----------
 def whois_ht(domain):
     raw = http_text(f"https://api.hackertarget.com/whois/?q={domain}")
     b = {}
@@ -148,7 +142,6 @@ def whois_ht(domain):
             vote(f, m.group(1), "ht", b)
     return b
 
-# ---------- 4. LEANWHOIS ----------
 def whois_lean(domain):
     raw = http_text(f"https://leanwhois.com/whois/{domain}")
     b = {}
@@ -167,7 +160,6 @@ def whois_lean(domain):
             vote(f, m.group(1), "lean", b)
     return b
 
-# ---------- 5. WHOIS-NIMBUS ----------
 def whois_nimbus(domain):
     raw = http_text(f"https://whois.nimbus.co.id/{domain}")
     b = {}
@@ -185,7 +177,6 @@ def whois_nimbus(domain):
             vote(f, m.group(1), "nimbus", b)
     return b
 
-# ---------- 6. DNSLIZARD ----------
 def whois_lizard(domain):
     raw = http_text(f"https://dnslizard.com/whois/{domain}")
     b = {}
@@ -203,7 +194,6 @@ def whois_lizard(domain):
             vote(f, m.group(1), "lizard", b)
     return b
 
-# ---------- 7. WHOIS.CYMRU ----------
 def whois_cymru(domain):
     raw = http_text(f"https://whois.cymru.com/whois/{domain}")
     b = {}
@@ -221,7 +211,6 @@ def whois_cymru(domain):
             vote(f, m.group(1), "cymru", b)
     return b
 
-# ---------- 8. WHOIS.NINXUS ----------
 def whois_ninxus(domain):
     raw = http_text(f"https://whois.ninxus.com/whois/{domain}")
     b = {}
@@ -239,7 +228,6 @@ def whois_ninxus(domain):
             vote(f, m.group(1), "ninxus", b)
     return b
 
-# ---------- 9. WHOIS.LEAN-WS ----------
 def whois_leanws(domain):
     raw = http_text(f"https://whois.lean.ws/whois/{domain}")
     b = {}
@@ -257,7 +245,6 @@ def whois_leanws(domain):
             vote(f, m.group(1), "leanws", b)
     return b
 
-# ---------- 10. NS-HINT ----------
 def ns_hint(domain):
     try:
         ans = requests.get(f"https://dns.google/resolve?name={domain}&type=NS", timeout=8).json()
@@ -265,9 +252,7 @@ def ns_hint(domain):
         return {"Name Server": ns} if ns else {}
     except: return {}
 
-# ---------- 11. HISTORICAL ----------
 def hist_whois(domain):
-    # free preview 1 record
     try:
         j = requests.get(f"https://domaininfo.shreshtait.com/api/search/{domain}", timeout=8).json()
         if j.get("creation_date"):
@@ -275,7 +260,6 @@ def hist_whois(domain):
     except: return {}
     return {}
 
-# ---------- Merger ----------
 def pro_whois(domain):
     domain = normalize_domain(domain)
     bucket = {}
@@ -290,7 +274,6 @@ def pro_whois(domain):
             else:
                 vote(f, v, src.__name__, bucket)
 
-    # mapping rapih
     GROUPS = {
         "Registrasi": ["Domain Name","Registry Domain ID","Creation Date",
                        "Updated Date","Expiration Date","Domain Status"],
@@ -310,7 +293,6 @@ def pro_whois(domain):
         else:
             flat[f] = raw or "-"
 
-    # hitung umur & cek privacy
     create = flat.get("Creation Date", "-")
     if create != "-":
         try:
@@ -334,7 +316,6 @@ def pro_whois(domain):
 
     return render_pro(GROUPS, flat)
 
-# ---------- Renderer ----------
 def render_pro(groups, data):
     col1, col2 = 28, 50
     line = RED + "+" + "-"*col1 + "+" + "-"*col2 + "+" + RESET
@@ -354,10 +335,8 @@ def render_pro(groups, data):
     out.append(line)
     return "\n".join(out)
 
-# ---------- kompatibel ----------
 whois_domain = pro_whois
 
-# ---------- CLI ----------
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 2:

@@ -12,7 +12,7 @@ def attack_surface_mapper(domain):
         "cdn": "Unknown"
     }
 
-    # IP resolve
+    
     try:
         result["ip_addresses"] = list(
             set([socket.gethostbyname(domain)])
@@ -20,7 +20,7 @@ def attack_surface_mapper(domain):
     except:
         pass
 
-    # DNS records
+    
     for rtype in ["A", "MX", "NS", "TXT"]:
         try:
             answers = dns.resolver.resolve(domain, rtype)
@@ -28,7 +28,7 @@ def attack_surface_mapper(domain):
         except:
             result["dns_records"][rtype] = []
 
-    # Simple subdomain wordlist
+    
     common_subs = ["www", "mail", "api", "dev", "test"]
     for sub in common_subs:
         try:
@@ -38,7 +38,7 @@ def attack_surface_mapper(domain):
         except:
             pass
 
-    # Hosting / CDN detection
+    
     try:
         r = requests.get(f"http://{domain}", timeout=5)
         server = r.headers.get("Server", "").lower()

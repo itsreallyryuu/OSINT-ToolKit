@@ -2,11 +2,11 @@ import requests
 import re
 
 RESET       = "\033[0m"
-BRIGHT_RED  = "\033[91m"  # merah menyala untuk border
+BRIGHT_RED  = "\033[91m"
 GREEN       = "\033[92m"
 WHITE       = "\033[97m"
 CYAN        = "\033[96m"
-YELLOW      = "\033[93m"  # untuk peringatan
+YELLOW      = "\033[93m"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (OSINT Toolkit)"
@@ -31,15 +31,15 @@ def fingerprint(url):
         headers = str(r.headers).lower()
         body = r.text.lower()
 
-        # SERVER
+        
         server = r.headers.get("Server", "Unknown")
         results.append(("Server", server))
 
-        # POWERED BY
+        
         powered = r.headers.get("X-Powered-By", "Unknown")
         results.append(("X-Powered-By", powered))
 
-        # TECHNOLOGY DETECTION
+        
         detected = []
         for tech, signs in TECH_SIGNS.items():
             for sign in signs:
@@ -53,7 +53,7 @@ def fingerprint(url):
     except requests.RequestException:
         return YELLOW + "[!] Tidak bisa fingerprint website" + RESET
 
-    # OUTPUT TABLE
+    
     col1, col2 = 20, 60
     line = BRIGHT_RED + "+" + "-"*col1 + "+" + "-"*col2 + "+" + RESET
 

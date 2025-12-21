@@ -11,13 +11,14 @@ from modules.ip_geo import ip_geolocation
 from modules.attack_surface import attack_surface_mapper
 from modules.footprint_analyzer import footprint_analyzer
 from modules.asset_monitor import asset_snapshot, compare_snapshot
+from datetime import datetime
 
 
 
 
 RESET       = "\033[0m"
-BRIGHT_RED  = "\033[91m"  # merah menyala, untuk borders, info, error
-WHITE       = "\033[97m"  # text utama
+BRIGHT_RED  = "\033[91m"
+WHITE       = "\033[97m"
 DARK_RED    = "\033[31;2m"  
 
 
@@ -274,7 +275,7 @@ def main():
             post_action(result)
 
         elif choice == "0":
-            print(BRIGHT_RED + "Exit..." + RESET)
+            print(BRIGHT_RED + f"[{datetime.now():%H:%M:%S}] Siesta off. Bye.\n" + RESET)
             break
 
         else:
