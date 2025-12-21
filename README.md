@@ -96,11 +96,8 @@ python main.py
 ⚠️ Disclaimer
 Tools ini dibuat untuk tujuan edukasi, pembelajaran, dan riset keamanan.
 
-Gunakan hanya pada domain, IP, atau target yang kamu miliki atau memiliki izin resmi.
-Segala bentuk penyalahgunaan berada di luar tanggung jawab pengembang.
-
-👨‍💻 Developed By
-Ryuu
+Developed By
+Itsreallyryuu / Ryuudev
 
 🔗 GitHub
 https://github.com/itsreallyryuu
@@ -111,7 +108,7 @@ https://www.tiktok.com/@ryuudev.new
 📸 Instagram
 https://www.instagram.com/adannryuu
 
-<p align="center"> <b>Siesta OSINT v1</b><br> Recon smarter • Learn deeper • Stay ethical </p> ```
+<p align="center"> <b>Siesta OSINT v1</b><br> Recon smarter • Learn deeper • Stay ethical </p>
 
 
 
