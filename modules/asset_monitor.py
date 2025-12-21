@@ -10,7 +10,7 @@ def asset_snapshot(url):
         return {
             "status_code": r.status_code,
             "headers_hash": _hash(str(r.headers)),
-            "body_hash": _hash(r.text[:2000])  # limit
+            "body_hash": _hash(r.text[:2000])
         }
     except:
         return None
