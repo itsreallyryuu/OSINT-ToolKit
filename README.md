@@ -99,5 +99,20 @@ https://www.instagram.com/adannryuu
 <p align="center"> <b>Siesta OSINT v1</b><br> Recon smarter • Learn deeper • Stay ethical </p>
 
 
+---
+
+## 💖 Support & Donation
+
+Jika kamu merasa **Siesta OSINT v1** bermanfaat dan ingin mendukung pengembangan tools ini, kamu bisa berdonasi melalui e-wallet berikut:
+
+- 🔵 **GoPay**
+- 🔵 **DANA**
+- 🟣 **OVO**
+
+📱 **Nomor:** `081252456382`  
+👤 **Atas Nama:** **Ryuudev** / **ryuudev** / **adanzzstore**
+
+Setiap dukungan sangat berarti untuk pengembangan dan pembelajaran ke depannya.  
+Terima kasih banyak sudah support! ✨
 
 
