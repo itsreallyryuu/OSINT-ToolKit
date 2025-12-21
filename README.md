@@ -77,6 +77,7 @@ Siesta OSINT **bersifat cross-platform** dan dapat dijalankan di berbagai lingku
 
 ---
 
+
 ### Install & Run
 
 ```bash
@@ -89,6 +90,9 @@ python -m pip install dnspython
 
 # jalankan tools
 python main.py
+```
+---
+
 ⚠️ Disclaimer
 Tools ini dibuat untuk tujuan edukasi, pembelajaran, dan riset keamanan.
 
@@ -108,3 +112,7 @@ https://www.tiktok.com/@ryuudev.new
 https://www.instagram.com/adannryuu
 
 <p align="center"> <b>Siesta OSINT v1</b><br> Recon smarter • Learn deeper • Stay ethical </p> ```
+
+
+
+
