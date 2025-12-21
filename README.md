@@ -11,8 +11,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8+-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-green?style=flat-square">
   <img src="https://img.shields.io/badge/OSINT-Toolkit-red?style=flat-square">
+  <img src="https://img.shields.io/badge/Cross--Platform-Yes-green?style=flat-square">
 </p>
 
 ---
@@ -40,122 +40,32 @@ Siesta OSINT cocok digunakan oleh:
 
 ## ✨ Features
 
-### 🔐 Whois Domain
-- Mengambil data WHOIS dari registry resmi (IANA & WHOIS server terkait)
-- Mendukung berbagai TLD secara otomatis
-- Menampilkan informasi domain selengkap yang tersedia (non-GDPR protected)
-
-**Data yang bisa diperoleh:**
-- Domain Name
-- Registrar
-- Creation Date
-- Expiration Date
-- Updated Date
-- Name Server
-- Domain Status
-- Informasi tambahan lainnya (jika tersedia)
-
----
-
-### 🌐 IP Information
-- Informasi dasar alamat IP
-- ISP & Organization
-- ASN
-- Country / Region
-- Network information
-
-Digunakan untuk analisis awal target berbasis IP.
-
----
-
-### 📡 DNS Lookup
-Melakukan pengecekan DNS record pada domain.
-
-**Record yang didukung:**
-- A
-- MX
-- NS
-- TXT
-
-Berguna untuk memahami konfigurasi DNS dan potensi misconfiguration.
-
----
-
-### 👤 Username Checker
-- Mengecek ketersediaan atau keberadaan username di berbagai platform populer
-- Cocok untuk OSINT profiling dan investigasi identitas digital
-
----
-
-### 📄 HTTP Header Analyzer
-- Analisis HTTP response header
-- Deteksi server
-- Security headers
-- Informasi konfigurasi HTTP
-
----
-
-### 🧠 Web Technology Detection
-- Deteksi teknologi website
-- Web server
-- Framework
-- CMS (jika terdeteksi)
-- Teknologi frontend/backend umum
-
-Digunakan untuk fingerprinting awal website.
-
----
-
-### 📍 IP Geolocation
-- Pelacakan lokasi IP berbasis database publik
-- Negara, region, kota
-- ISP / Organization
-- Latitude & Longitude
-- Link Google Maps (copyable)
-
-⚠️ Tidak melakukan pelacakan real-time.
-
----
-
-### 🎯 Attack Surface Mapper
-Melakukan pemetaan permukaan serangan (*attack surface*) pada sebuah domain.
-
-**Fungsi utama:**
-- Resolve IP address
-- Enumerasi subdomain sederhana
-- Pengambilan DNS record penting
-- Deteksi hosting dan CDN dasar
-
-Digunakan untuk reconnaissance awal dan asset discovery.
-
----
-
-### 🌍 Online Presence Scanner
-- Mencari jejak kehadiran online username / keyword
-- Menampilkan platform yang terdeteksi
-- URL profile
-- Confidence level (LOW / MEDIUM / HIGH)
-
----
-
-### 🔄 Website Change Monitor
-- Mengambil snapshot website
-- Membandingkan perubahan konten
-- Mendeteksi perubahan mencurigakan atau defacement
+- Whois Domain  
+- IP Information  
+- DNS Lookup  
+- Username Checker  
+- HTTP Header Analyzer  
+- Web Technology Detection  
+- IP Geolocation  
+- Attack Surface Mapper  
+- Online Presence Scanner  
+- Website Change Monitor  
 
 ---
 
 ## 🖥️ Platform Support
 
-Siesta OSINT dapat dijalankan di:
+Siesta OSINT **bersifat cross-platform** dan dapat dijalankan di berbagai lingkungan terminal selama Python tersedia.
 
-- ✅ Windows (CMD / PowerShell)
-- ✅ Linux (Terminal)
-- ✅ macOS (Terminal)
-- ✅ WSL (Windows Subsystem for Linux)
-- ✅ Server / VPS Linux
+### ✅ Supported Platforms
+- Windows (CMD / PowerShell)
+- Linux (Terminal)
+- macOS (Terminal)
+- Termux (Android)
+- WSL (Windows Subsystem for Linux)
+- VPS / Server Linux
 
-❌ Tidak direkomendasikan untuk Termux (Android)
+> Jika Python dan dependency tersedia, tools ini dapat dijalankan tanpa masalah.
 
 ---
 
@@ -179,3 +89,22 @@ python -m pip install dnspython
 
 # jalankan tools
 python main.py
+⚠️ Disclaimer
+Tools ini dibuat untuk tujuan edukasi, pembelajaran, dan riset keamanan.
+
+Gunakan hanya pada domain, IP, atau target yang kamu miliki atau memiliki izin resmi.
+Segala bentuk penyalahgunaan berada di luar tanggung jawab pengembang.
+
+👨‍💻 Developed By
+Ryuu
+
+🔗 GitHub
+https://github.com/itsreallyryuu
+
+🎵 TikTok
+https://www.tiktok.com/@ryuudev.new
+
+📸 Instagram
+https://www.instagram.com/adannryuu
+
+<p align="center"> <b>Siesta OSINT v1</b><br> Recon smarter • Learn deeper • Stay ethical </p> ```
