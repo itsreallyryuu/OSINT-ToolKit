@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="https://ibb.co.com/d4KXXP8b" width="100%">
-</p>
-
-<h1 align="center">🕵️‍♂️ Siesta OSINT v1</h1>
+<h1 align="center">Siesta OSINT v1</h1>
 
 <p align="center">
   <b>Simple • Fast • Structured OSINT Toolkit</b><br>
