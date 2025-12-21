@@ -24,14 +24,6 @@ Tool ini membantu proses:
 
 dengan memanfaatkan **data terbuka (open-source)** dari internet dan layanan publik.
 
-Siesta OSINT cocok digunakan oleh:
-- OSINT Researcher  
-- Security Enthusiast  
-- Bug Hunter  
-- Pentester pemula hingga menengah  
-- Investigator Digital  
-- Pelajar yang ingin belajar OSINT secara praktis  
-
 ---
 
 ## ✨ Features
